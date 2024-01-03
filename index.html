@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinator Selector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Combinator Selector</h1>
+    <ol type="1">
+      <li>
+        <h2>*Selector - Chọn tất cả element</h2>
+        <p>Dùng dấu <b>"*"</b> để chọn tất cả các thẻ để định dạng toàn bộ</p>
+      </li>
+      <li>
+        <h2 class="demo">element.class</h2>
+        <p class="demo">Chọn tất cả các thẻ element, có class là class</p>
+        <p class="demo">
+          Ví dụ : p.intro - tức là chọn tất cả thẻ p trong class intro
+        </p>
+        <a
+          href="https://www.w3schools.com/cssref/css_selectors.php"
+          target="_blank"
+          ><b>Tìm hiểu thêm trên đường dẫn</b></a
+        >
+      </li>
+      <li>
+        <h2>element,element</h2>
+        <p>
+          Áp dụng cho bộ chọn được liệt kê, mỗi bộ chọn cách nhau bởi dấu ","
+        </p>
+        <p>
+          Ví dụ : h1,h2,p{Code CSS} áp dụng code CSS cho h, h2, p
+          <br />#id123,.demo{} Áp dụng được cho cả ID và Class
+        </p>
+      </li>
+      <li>
+        <h2>.class1.class2</h2>
+        <p>Tác động lên class mà có cả tên của class1 lẫn class2</p>
+      </li>
+      <li class="space">
+        <h2>selector1 selector2</h2>
+        <p>
+          Tức là chọn tất cả thẻ s1 có trong s2, chỉ áp dụng khi s2 nhỏ đơn 1
+          cấp đối với s1
+        </p>
+        <h4>Ví dụ 1:</h4>
+        <p><b>div p</b> : Chọn tất cả thẻ div nằm trong thẻ p</p>
+        <p>
+          <code>Viết như sau : <b>div p{}</b></code>
+        </p>
+        <h4>Ví dụ 2:</h4>
+        <h5>Tuổi trẻ</h5>
+        <h6 class="demo">Không có tiền</h6>
+        <h6 id="line3">Bạn có gì ?</h6>
+        <div>
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+        </div>
+        <div class="Chuc_mung">
+          <p>Chúc bạn 1</p>
+          <p>Chúc bạn 2</p>
+        </div>
+      </li>
+      <li>
+        <h2>element1>element2</h2>
+        <p>Chọn tất cả thẻ s2 là con trực tiếp của s1</p>
+        <p>Con trực tiếp là thẻ con nhỏ hơn 1 cấp</p>
+        <p>
+          Ví dụ 1 : <br /><b>div>p</b> : chọn tất cả thẻ p là con trực tiếp div
+        </p>
+        <h4>Ví dụ 2 :</h4>
+        <div class="line75">
+          <p>Đoạn 1</p>
+          <p>Đoạn 2</p>
+          <blockquote>
+            <p>Thẻ p khác cấp</p>
+          </blockquote>
+          <p>Đoạn 3</p>
+          <p>Đoạn 4</p>
+        </div>
+      </li>
+      <li>
+        <h2>selector1+selector2</h2>
+        <p>Tác động lên thẻ s2 nằm ngay sau thẻ s1</p>
+        <h3 class="line88">Ví dụ :</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="line90">
+          <b>div+p</b> : chọn phần tử p đầu tiên
+          <strong><span>được đặt ngay sau</span></strong> phần tử div
+        </p>
+        <p class="demo">Lorem, ipsum dolor.</p>
+        <h4 class="demo demo1">Dòng này vẫn thỏa điều kiện khi .demo+h4</h4>
+        <h4>Lorem ipsum dolor sit amet.</h4>
+      </li>
+      <li>
+        <h2>selector1~selector2</h2>
+        <p class="line100">
+          Tác động lên tất cả thẻ s2 <b><span>nằm phía sau</span></b> s1
+        </p>
+        <h4>Đoạn 1</h4>
+        <h4>Đoạn 2</h4>
+      </li>
+    </ol>
+    <hr />
+    <hr />
+    <h1>Hệ thống lại Combinator Selector</h1>
+    <table>
+      <thead>
+        <th>STT</th>
+        <th colspan="2">Ký tự kết hợp</th>
+        <th colspan="2">Nội dung</th>
+        <th colspan="3">Ý nghĩa</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="yellowgreen">1</td>
+          <td colspan="2"><b>*</b></td>
+          <td colspan="2">*</td>
+          <td>Chọn tất cả thẻ</td>
+        </tr>
+        <tr>
+          <td class="yellowgreen">2</td>
+          <td colspan="2">element.class</td>
+          <td colspan="2">selector1.class1</td>
+          <td>Chọn tất cả thẻ s1 có class class1</td>
+        </tr>
+        <tr>
+          <td class="yellowgreen">3</td>
+          <td colspan="2"><b>,</b></td>
+          <td colspan="2">selector1,selector2</td>
+          <td>Chọn các thẻ s1, s2</td>
+        </tr>
+        <tr>
+          <td class="yellowgreen">4</td>
+          <td colspan="2">.class1.class2</td>
+          <td colspan="2">.demo.demo1</td>
+          <td>Chọn tất cả class đồng thời có tên demo và demo2</td>
+        </tr>
+        <tr>
+          <td class="yellowgreen">5</td>
+          <td colspan="2">space</td>
+          <td colspan="2">selector1 selector2</td>
+          <td>Chọn tất cả thẻ s2 nằm trong thẻ s1</td>
+        </tr>
+        <tr>
+          <td class="yellowgreen">6</td>
+          <td colspan="2">></td>
+          <td colspan="2">selector1>selector2</td>
+          <td>Chọn tất cả thẻ s2 là con trực tiếp thẻ s1</td>
+        </tr>
+        <tr>
+          <td class="yellowgreen">7</td>
+          <td colspan="2">+</td>
+          <td colspan="2">selector1+selector2</td>
+          <td>Chọn s2 đầu tiên được đặt ngay sau s1</td>
+        </tr>
+        <tr>
+          <td class="yellowgreen">8</td>
+          <td colspan="2">~</td>
+          <td colspan="2">selector1~selector2</td>
+          <td>Chọn tất cả s2 nằm sau s1</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

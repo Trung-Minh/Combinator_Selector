@@ -1,0 +1,63 @@
+* {
+  color: yellowgreen;
+  background-color: whitesmoke;
+}
+
+p.demo {
+  color: black;
+}
+
+* {
+  color: black;
+}
+
+.Chuc_mung p {
+  /* Thẻ p là con của thẻ chúc mừng */
+  font-size: 20px;
+}
+
+.line75 > p {
+  /* Thẻ p là con trực tiếp của class line75 */
+  color: blue;
+}
+
+blockquote p {
+  /* Thẻ p là con của thẻ blockquote */
+  color: aqua;
+}
+
+.line90 span {
+  color: red;
+}
+
+.line88 + p {
+  /* Chọn thẻ p đặt ngay sau class line85 */
+  /* Tác động lên thẻ p đặt ngay sau class line85 */
+  color: blueviolet;
+}
+
+.demo.demo1 + h4 {
+  /* Chọn thẻ h4 đứng ngay sau class demo */
+  color: blue;
+}
+
+.line100 span {
+  color: red;
+}
+
+.line100 ~ h4 {
+  /* Chọn tất cả thẻ h4 phía sau class line100 */
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+thead th {
+  background-color: pink;
+}
+
+.yellowgreen {
+  background-color: yellowgreen;
+}
